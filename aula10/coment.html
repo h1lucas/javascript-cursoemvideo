@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de país</title>
+    <style>
+        div#res{
+            color: blue;
+            font-size: 18px;
+        }
+
+
+       
+    </style>
+</head>
+<body>
+    <h1>Qual é o seu país?</h1>
+    <input type="text" name="txtpais" id="txtpais">
+
+
+    <input type="button" value="Analisar" onclick="analisar()">
+    <input type="button" value="Limpar" onclick="limpar()">
+
+
+    <div id="res">
+        <strong><p>Resultado</p></strong>
+    </div>
+    <script>
+        var txtpais = window.document.getElementById('txtpais')
+        var res = window.document.querySelector('div#res')
+
+
+        function analisar(){
+            var pais = (txtpais.value);
+            pais = pais.toUpperCase();
+            res.innerHTML = `<p>O seu país é: <strong>${pais}</strong><p>`
+            
+            if(pais != 'BRASIL') {
+                res.innerHTML += `<p>Você é estrangeiro!</P>`;
+            } else {
+                res.innerHTML += '<p>Você é Brasileiro!</p>'
+            }         
+        }
+        function limpar(){
+            txtpais.value = '';
+            res.innerHTML = '<p><strong>Resultado</strong><p>';
+        }
+
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,5 @@
+var c = 5
+do { //faça
+    console.log(`${c}`)
+    c++
+} while (c != 0) //enquanto

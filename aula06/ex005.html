@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+</head>
+<body>
+    <h1>Iniciando Estudos com DOM</h1>
+    <p>Aqui vai o resultado!</p>
+    <p>Apendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="b">Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1] //no getElementsByTagName é obrigatório colocar [] e especificar o número da Tag que você quer.
+        p1.style.background = 'blue'
+        p1.style.color = 'aqua'
+        var corpo = window.document.body
+        corpo.style.color = 'blue'
+        corpo.style.background = 'brown'
+        window.document.write(p1.innerText)
+        //ficar atento se o "Element's" está no plural ou no singular
+        var d = window.document.getElementById('b')
+        d.style.background = 'green'
+        d.innerText = 'modifiquei o texto por DOM usando JS'
+    </script>
+</body>
+</html>

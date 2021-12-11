@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colocando m e f</title>
+    <style>
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <input type="radio" name="radsex" id="m">
+        <label for="m">masculino</label>
+        <input type="radio" name="radsex" id="f">
+        <label for="f">feminino</label>
+    </p>
+        <div id="res"></div>
+        <p><input type="button" value="verficar" onclick="verificar()"></p>
+        <script>
+        function verificar() {
+            var res = document.querySelector('div#res')
+            var fsex = document.getElementsByName('radsex')
+            var gsex = ''
+            if (fsex[0].checked) {
+            gsex = 'homem'
+            res.style.color = 'lightblue'
+            } else if (fsex[1].checked) {
+            gsex = 'mulher'
+            res.style.color = 'pink'
+            }
+            res.style.textAlign = 'center'
+            res.innerHTML = `você é ${gsex}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+var c = 1
+do { //faça
+    console.log(`${c}`)
+    
+} while (c <= 6) //enquanto
